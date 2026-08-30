@@ -25,7 +25,6 @@ pub(crate) struct InitiativeRecord {
     pub created_at: String,
     pub updated_at: String,
     pub archived_at: Option<String>,
-    #[serde(skip, default)]
     pub row_seq: i64,
 }
 
@@ -57,7 +56,6 @@ pub(crate) struct UpdateRecord {
     pub created_by: String,
     pub initiative_revision: String,
     pub created_at: String,
-    #[serde(skip, default)]
     pub row_seq: i64,
 }
 
