@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,"required":["updates","next_cursor"],"properties":{"updates":{"type":"array","items":{"$ref":"initiative-update-response.schema.json"}},"next_cursor":{"type":["string","null"]}}}
