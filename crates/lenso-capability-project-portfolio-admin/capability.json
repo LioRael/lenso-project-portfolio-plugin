@@ -1,0 +1,13 @@
+{
+  "id": "lenso.project-portfolio-admin@1",
+  "version": "1.0.0",
+  "portable": true,
+  "cross_lane_transfer": true,
+  "operations": [
+    { "name": "archive_initiative", "interaction": "request", "request_schema": "schemas/archive-initiative-request.schema.json", "response_schema": "schemas/admin-initiative-response.schema.json", "domain_error_schema": "schemas/admin-error.schema.json" },
+    { "name": "attach_project", "interaction": "request", "request_schema": "schemas/attach-project-request.schema.json", "response_schema": "schemas/project-membership-response.schema.json", "domain_error_schema": "schemas/admin-error.schema.json" },
+    { "name": "update_project_snapshot", "interaction": "request", "request_schema": "schemas/update-project-snapshot-request.schema.json", "response_schema": "schemas/project-membership-response.schema.json", "domain_error_schema": "schemas/admin-error.schema.json" },
+    { "name": "detach_project", "interaction": "request", "request_schema": "schemas/detach-project-request.schema.json", "response_schema": "schemas/detach-project-response.schema.json", "domain_error_schema": "schemas/admin-error.schema.json" },
+    { "name": "reorder_projects", "interaction": "request", "request_schema": "schemas/reorder-projects-request.schema.json", "response_schema": "schemas/reorder-projects-response.schema.json", "domain_error_schema": "schemas/admin-error.schema.json" }
+  ]
+}

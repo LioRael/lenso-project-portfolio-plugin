@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,"required":["projects","next_position"],"properties":{"projects":{"type":"array","items":{"$ref":"project-membership-response.schema.json"}},"next_position":{"type":["integer","null"],"minimum":0}}}

@@ -1,0 +1,16 @@
+{
+  "id": "lenso.project-portfolio@1",
+  "version": "1.0.0",
+  "portable": true,
+  "cross_lane_transfer": true,
+  "operations": [
+    { "name": "create_initiative", "interaction": "request", "request_schema": "schemas/create-initiative-request.schema.json", "response_schema": "schemas/initiative-response.schema.json", "domain_error_schema": "schemas/mutation-error.schema.json" },
+    { "name": "get_initiative", "interaction": "request", "request_schema": "schemas/get-initiative-request.schema.json", "response_schema": "schemas/initiative-response.schema.json", "domain_error_schema": "schemas/read-error.schema.json" },
+    { "name": "list_initiatives", "interaction": "request", "request_schema": "schemas/list-initiatives-request.schema.json", "response_schema": "schemas/list-initiatives-response.schema.json", "domain_error_schema": "schemas/read-error.schema.json" },
+    { "name": "update_initiative", "interaction": "request", "request_schema": "schemas/update-initiative-request.schema.json", "response_schema": "schemas/initiative-response.schema.json", "domain_error_schema": "schemas/mutation-error.schema.json" },
+    { "name": "list_initiative_projects", "interaction": "request", "request_schema": "schemas/list-initiative-projects-request.schema.json", "response_schema": "schemas/list-initiative-projects-response.schema.json", "domain_error_schema": "schemas/read-error.schema.json" },
+    { "name": "add_initiative_update", "interaction": "request", "request_schema": "schemas/add-initiative-update-request.schema.json", "response_schema": "schemas/initiative-update-response.schema.json", "domain_error_schema": "schemas/mutation-error.schema.json" },
+    { "name": "list_initiative_updates", "interaction": "request", "request_schema": "schemas/list-initiative-updates-request.schema.json", "response_schema": "schemas/list-initiative-updates-response.schema.json", "domain_error_schema": "schemas/read-error.schema.json" },
+    { "name": "read_rollup", "interaction": "request", "request_schema": "schemas/read-rollup-request.schema.json", "response_schema": "schemas/rollup-response.schema.json", "domain_error_schema": "schemas/read-error.schema.json" }
+  ]
+}
