@@ -13,12 +13,9 @@ for manifest in crates/*/Cargo.toml; do
   rg -qx 'publish = true' "$manifest" || { echo "$manifest is not explicitly publishable" >&2; exit 1; }
 done
 
-for package in lenso-capability-project-portfolio lenso-capability-project-portfolio-admin; do
+for package in lenso-capability-project-portfolio lenso-capability-project-portfolio-admin lenso-project-portfolio-postgres-plugin; do
   "$cargo_bin" package "${flags[@]}" -p "$package"
 done
-"$cargo_bin" package "${flags[@]}" --no-verify -p lenso-project-portfolio-postgres-plugin \
-  --config 'patch.crates-io.lenso-capability-project-portfolio.path="crates/lenso-capability-project-portfolio"' \
-  --config 'patch.crates-io.lenso-capability-project-portfolio-admin.path="crates/lenso-capability-project-portfolio-admin"'
 
 target="$($cargo_bin metadata --no-deps --format-version=1 | python3 -c 'import json,sys; print(json.load(sys.stdin)["target_directory"])')"
 for package in lenso-capability-project-portfolio lenso-capability-project-portfolio-admin lenso-project-portfolio-postgres-plugin; do
