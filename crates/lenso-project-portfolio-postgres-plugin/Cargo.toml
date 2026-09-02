@@ -1,6 +1,6 @@
 [package]
 name = "lenso-project-portfolio-postgres-plugin"
-version = "0.1.0"
+version = "0.1.1"
 description = "PostgreSQL-backed Project Portfolio Plugin for Lenso."
 edition.workspace = true
 license.workspace = true
@@ -22,8 +22,8 @@ lenso.workspace = true
 lenso-auth-sdk.workspace = true
 lenso-capability-access-control.workspace = true
 lenso-capability-organization-membership.workspace = true
-lenso-capability-project-portfolio = { version = "0.1.0", path = "../lenso-capability-project-portfolio" }
-lenso-capability-project-portfolio-admin = { version = "0.1.0", path = "../lenso-capability-project-portfolio-admin" }
+lenso-capability-project-portfolio = { version = "0.1.1", path = "../lenso-capability-project-portfolio" }
+lenso-capability-project-portfolio-admin = { version = "0.1.1", path = "../lenso-capability-project-portfolio-admin" }
 lenso-capability-secrets.workspace = true
 lenso-kernel.workspace = true
 lenso-postgres-kit.workspace = true
