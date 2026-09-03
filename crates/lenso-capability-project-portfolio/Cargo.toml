@@ -1,6 +1,6 @@
 [package]
 name = "lenso-capability-project-portfolio"
-version = "0.1.0"
+version = "0.1.1"
 description = "Portable Project Portfolio Capability contract for Lenso."
 edition.workspace = true
 license.workspace = true
