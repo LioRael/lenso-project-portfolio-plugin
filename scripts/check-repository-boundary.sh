@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-expected_crates=$'lenso-capability-project-portfolio\nlenso-capability-project-portfolio-admin\nlenso-project-portfolio-postgres-plugin'
+expected_crates=$'lenso-capability-project-portfolio\nlenso-capability-project-portfolio-admin\nlenso-project-portfolio-admin-agent-tools-plugin\nlenso-project-portfolio-agent-tools-plugin\nlenso-project-portfolio-postgres-plugin'
 actual_crates="$(find crates -mindepth 2 -maxdepth 2 -name Cargo.toml -print0 | xargs -0 sed -n 's/^name = "\([^"]*\)"/\1/p' | LC_ALL=C sort)"
 [[ "$actual_crates" == "$expected_crates" ]] || { printf 'unexpected workspace crate boundary\n%s\n' "$actual_crates" >&2; exit 1; }
 

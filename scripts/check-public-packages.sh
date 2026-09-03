@@ -9,8 +9,17 @@ fi
 flags=(--locked)
 if [[ "${LENSO_PACKAGE_ALLOW_DIRTY:-0}" == "1" ]]; then flags+=(--allow-dirty); fi
 
-for manifest in crates/*/Cargo.toml; do
+for manifest in \
+  crates/lenso-capability-project-portfolio/Cargo.toml \
+  crates/lenso-capability-project-portfolio-admin/Cargo.toml \
+  crates/lenso-project-portfolio-postgres-plugin/Cargo.toml; do
   rg -qx 'publish = true' "$manifest" || { echo "$manifest is not explicitly publishable" >&2; exit 1; }
+done
+
+for manifest in \
+  crates/lenso-project-portfolio-agent-tools-plugin/Cargo.toml \
+  crates/lenso-project-portfolio-admin-agent-tools-plugin/Cargo.toml; do
+  rg -qx 'publish = false' "$manifest" || { echo "$manifest must remain private" >&2; exit 1; }
 done
 
 for package in lenso-capability-project-portfolio lenso-capability-project-portfolio-admin lenso-project-portfolio-postgres-plugin; do

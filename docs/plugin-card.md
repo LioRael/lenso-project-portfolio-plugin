@@ -21,6 +21,12 @@ Both require exact caller allowlists, exact-operation Auth assertions, active
 membership, and Access Control. The target remains final authority over CAS,
 archival, membership uniqueness, and full-order invariants.
 
+Separate `lenso.project-portfolio.agent-tools` and
+`lenso.project-portfolio-admin.agent-tools` adapters each provide
+`lenso.agent.tool-provider@2` while requiring only their corresponding
+Portfolio Capability. They own no facts or policy. Removing either adapter
+removes only that Agent surface and leaves Portfolio state unchanged.
+
 ## Snapshot and rollup semantics
 
 Attach and refresh accept one project snapshot with a source-owned revision and
