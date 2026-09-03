@@ -15,6 +15,17 @@ The linked Plugin provides:
 - `lenso.project-portfolio-admin@1`: archive initiatives, attach/detach/reorder
   projects, and refresh an attached project snapshot.
 
+Two separate linked Agent Tool Plugins preserve that authority split:
+
+- `lenso.project-portfolio.agent-tools` exposes the eight ordinary portfolio
+  operations through `lenso.agent.tool-provider@2`.
+- `lenso.project-portfolio-admin.agent-tools` exposes the five administrative
+  operations through a separate `lenso.agent.tool-provider@2` contribution.
+
+Both adapters forward invocation context unchanged. Portfolio remains final
+authority over caller admission, authentication, membership, Access Control,
+CAS revisions, idempotency, archival, membership order, and snapshot evidence.
+
 It requires exactly one Provider for each of `lenso.secrets@1`,
 `lenso.organization-membership@1`, and `lenso.access-control@1`.
 
